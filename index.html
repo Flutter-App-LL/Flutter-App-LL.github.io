@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flutter-App-LL | Mobile Application Developer</title>
+  <meta name="description" content="Official developer portal for Flutter-App-LL mobile applications and tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg: #0b0f19;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --text: #f9fafb;
+      --text-muted: #9ca3af;
+      --accent: #38bdf8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
+      color: white;
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+
+    .app-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .app-card:hover {
+      border-color: #3b82f6;
+      transform: translateY(-2px);
+    }
+
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .app-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .app-title h2 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .app-title p {
+      font-size: 14px;
+      color: var(--accent);
+    }
+
+    .app-desc {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--card-border);
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .link-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      text-decoration: none;
+      color: var(--text);
+      display: block;
+      transition: border-color 0.2s;
+    }
+
+    .link-box:hover {
+      border-color: #3b82f6;
+    }
+
+    .link-box h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .link-box p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0 20px;
+      font-size: 13px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--card-border);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-badge">FL</div>
+      <h1>Flutter-App-LL</h1>
+      <p class="subtitle">Mobile Applications & Local-First Utility Tools</p>
+    </header>
+
+    <main>
+      <div class="app-card">
+        <div class="app-header">
+          <div class="app-icon">H</div>
+          <div class="app-title">
+            <h2>Hub — Private Local File Hub</h2>
+            <p>High-Speed Local P2P File Sharing</p>
+          </div>
+        </div>
+        <p class="app-desc">
+          A secure, private, zero-knowledge local file transfer solution for Android, iOS, and Desktop. Transfer large files, photos, videos, and directories effortlessly within your local Wi-Fi network without third-party cloud servers.
+        </p>
+        <div class="btn-group">
+          <a href="https://flutter-app-ll.github.io/privacy/" class="btn btn-primary">📜 Privacy Policy (Chính sách riêng tư)</a>
+          <a href="https://github.com/Flutter-App-LL/privacy" class="btn btn-outline">🐙 Source & Support</a>
+          <a href="/app-ads.txt" class="btn btn-outline">📄 app-ads.txt</a>
+        </div>
+      </div>
+
+      <div class="links-grid">
+        <a href="https://flutter-app-ll.github.io/privacy/" class="link-box">
+          <h3>🔒 Privacy Policy</h3>
+          <p>Read our commitment to zero-tracking, local-only transfers and user data autonomy.</p>
+        </a>
+
+        <a href="/app-ads.txt" class="link-box">
+          <h3>📢 app-ads.txt</h3>
+          <p>IAB Tech Lab Authorized Digital Sellers verification for mobile applications.</p>
+        </a>
+
+        <a href="https://github.com/Flutter-App-LL" target="_blank" rel="noopener noreferrer" class="link-box">
+          <h3>👨‍💻 Developer GitHub</h3>
+          <p>Explore open source repositories, issues, and application updates.</p>
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Flutter-App-LL. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
